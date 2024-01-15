@@ -1,9 +1,9 @@
 const { pool } = require('../conexion');
 
 async function verificarClase(req, res){
-    const { identrenamiento, cla_fecha } =req.body;
+    const { p_identrenamiento, p_cla_fecha } =req.body;
     const query= 'SELECT * from obtener_datos_clase($1, $2)';
-    const values = [ identrenamiento, cla_fecha ]; 
+    const values = [ p_identrenamiento, p_cla_fecha ]; 
     try{
         const client = await pool.connect();        
         const result= await client.query(query, values);               
