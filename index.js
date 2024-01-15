@@ -9,6 +9,7 @@ var entrenamiento_routes = require('./routes/entrenamientos.routes');
 var clases_routes = require('./routes/clases.routes');
 var recuperacion_routes = require('./routes/recuperacion.routes');
 var liker_routes = require('./routes/liker.routes');
+const clasesRoutes = require('./routes/clases.routes');
 
 // Middleware para manejar CORS
 app.use(cors()); // Esto permitirá todas las solicitudes desde cualquier origen
@@ -25,6 +26,7 @@ app.use('/api', credito_routes);
 app.use('/api', clases_routes);
 app.use('/api', recuperacion_routes);
 app.use('/api', liker_routes);
+app.use('/api', clasesRoutes);
 
 // Levantar el servidor en el puerto 3000
 app.listen(3000, () => {
