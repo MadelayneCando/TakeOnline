@@ -4,7 +4,6 @@ const router = new Router();
 var { verificarClase, agregarClase, verUsuarios, obtenerClaseSemanales, createClase, getClases, updateClase, cambiaClase, verUsuariosPorClase }= require('../controllers/clases.controllers');
 
 router.post('/verificarClase', verificarClase);
-router.post('/verificarClases', verificarClase);
 router.post('/agregarClase', agregarClase);
 router.post('/verUsuarios', verUsuarios);
 router.post('/createClase', createClase);
