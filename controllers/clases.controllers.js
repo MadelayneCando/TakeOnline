@@ -1,14 +1,14 @@
 const { pool } = require('../conexion');
 
 async function verificarClase(req, res){
-    const { p_identrenamiento, p_cla_fecha } =req.body;
+    const { identrenamiento, cla_fecha } =req.body;
     const query= 'SELECT * from obtener_datos_clase($1, $2)';
-    const values = [ p_identrenamiento, p_cla_fecha ]; 
+    const values = [ identrenamiento, cla_fecha ]; 
     try{
         const client = await pool.connect();        
         const result= await client.query(query, values);               
         client.release();        
-        if(result.rowCount > 0){   
+        if(result.rowCount > 0){  
             res.status(200).json(result.rows);  
         }else{
             res.status(400).json('No hay clase');
