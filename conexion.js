@@ -8,7 +8,7 @@ const pool = new Pool({ //obj pool tiene cadena de conexiones entre postgres y v
     port: '5432',
     ssl: {
         rejectUnauthorized: false, // Esto puede ser necesario en entornos de desarrollo, pero NO es recomendado en producción
-    }
+    } 
 });
 
 module.exports = { pool };

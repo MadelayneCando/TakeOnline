@@ -148,7 +148,6 @@ async function cambiaClase(req, res){ // req= requerimientos
 }
 
 
-
 module.exports={
     verificarClase,
     agregarClase,
