@@ -69,7 +69,7 @@ async function updateUsuario(req, res){
 async function getUsuarios(req, res){ // req= requerimientos 
     try{
         const client = await pool.connect();
-        const result = await client.query('select * from usuarios');
+        const result = await client.query('SELECT idusuario, idtipo, user_cedula, user_nombre, user_apellido, user_email, user_telefono, user_direccion, user_peso, user_altura, user_estado, user_creditosrestantes, user_foto FROM usuarios');
         client.release(); // suelta conexion, no conexion abierta
         res.json(result.rows);        
     }catch(err){
@@ -79,7 +79,7 @@ async function getUsuarios(req, res){ // req= requerimientos
 
 async function getUsuario(req, res){ // req= requerimientos 
     const {id} = req.params; // se puede o no poner .id
-    const query = 'Select * from usuarios where idusuario = $1'
+    const query = 'SELECT idusuario, idtipo, user_cedula, user_nombre, user_apellido, user_email, user_telefono, user_direccion, user_peso, user_altura, user_estado, user_creditosrestantes, user_foto from usuarios where idusuario = $1'
     const values = [id];
     try{
         const client = await pool.connect();
