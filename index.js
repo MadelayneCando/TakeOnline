@@ -1,6 +1,9 @@
 const express = require('express');
 const cors = require('cors'); // Importa la biblioteca cors
 const app = express();
+const helmet = require('helmet');
+app.use(helmet());
+
 
 var usuario_routes = require('./routes/usuario.routes');
 var instructores_routes = require('./routes/instructores.routes');
