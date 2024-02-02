@@ -9,9 +9,9 @@ async function createCreditos(req, res){
         const result= await client.query(query, values);              
         client.release();        
         if(result.rowCount > 0){
-            res.status(200).json({message: 'Se guardo el credito'});
+            res.status(200).json({message: 'Se guardó el credito'});
         }else{
-            res.status(400).json({message: 'No se guardo el credito'});
+            res.status(400).json({message: 'No se guardó el credito'});
         }       
     }catch(err){
         console.log(err);
