@@ -5,9 +5,10 @@ const router = new Router();
 var { getInstructores, createInstructores, updateInstructores, getInstructor, deleteInstructor } = require('../controllers/instructores.controllers');
 
 //Rutas endpoint
-router.get('/listarins', getInstructores);
-router.post('/crearins', createInstructores);
-router.put('/actualizari', updateInstructores);
+router.get('/listInstrucSecr', getInstructores);
+router.post('/createInstrucSecr', createInstructores);
+router.put('/updateInstrucSecr', updateInstructores);
 router.get('/listi/:id', getInstructor);
-router.delete('/deleteins/:cedula', deleteInstructor);
+router.delete('/deleteInstrucSecrec/:cedula', deleteInstructor);
+
 module.exports = router;

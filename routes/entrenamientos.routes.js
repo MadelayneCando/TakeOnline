@@ -3,7 +3,7 @@ const router = new Router();
 
 var { getEntrenamientos }= require('../controllers/entrenamiento.controllers');
 
-router.get('/listarEntrenamientos', getEntrenamientos); 
+router.get('/listEntrenaSecret', getEntrenamientos); 
 
 
 module.exports = router;

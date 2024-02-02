@@ -5,8 +5,8 @@ const router = new Router();
 var { createCreditos, getCreditos, shopCreditos } = require('../controllers/creditos.controllers');
 
 //Rutas endpoint
-router.post('/registerc', createCreditos);
-router.get('/listc', getCreditos);
-router.post('/comprarCreditos', shopCreditos);
+router.post('/registerCreditSecret', createCreditos);
+router.get('/listCredistSec', getCreditos);
+router.post('/shopCreditSec', shopCreditos);
 
 module.exports = router;

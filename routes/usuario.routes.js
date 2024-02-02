@@ -6,13 +6,13 @@ var { createUsuarios, getUsuarios, updateUsuario, getUsuario, deleteUsuario, val
 
 
 //Rutas endpoint
-router.post('/register', createUsuarios);
-router.get('/list', getUsuarios);
+router.post('/registerUserSt', createUsuarios);
+router.get('/listUsersSt', getUsuarios);
 router.get('/list/:id', getUsuario);
-router.put('/actualizar', updateUsuario);
-router.put('/cambiarUsuario', cambiaUsuario);
+router.put('/updateUserSt', updateUsuario);
+router.put('/changeUserSt', cambiaUsuario);
 router.delete('/delete/:id', deleteUsuario);
-router.post('/validarcorreo', validarCorreo);
+router.post('/validateEmailSt', validarCorreo);
 
 
 module.exports = router;
