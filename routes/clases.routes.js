@@ -9,8 +9,8 @@ router.post('/viewUserSecret', verUsuarios);
 router.post('/createClassSecret', createClase);
 router.post('/UserClassSecret', verUsuariosPorClase);
 router.put('/updateClase', updateClase);
-router.get('/getClassSecret', obtenerClaseSemanales);
+router.get('/getClassSecretSemal', obtenerClaseSemanales);
 router.get('/getClassSecret', getClases);
 router.put('/changeClassSecret', cambiaClase);
 
-module.exports = router; 
+module.exports = router;  
