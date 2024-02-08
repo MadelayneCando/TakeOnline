@@ -28,10 +28,10 @@ async function createClase(req, res){
         const result= await client.query(query, values);              
         client.release();        
         if(result.rowCount > 0){
-            res.status(200).json({message: 'Se creo la clase'});
+            res.status(200).json({message: 'Se creó la clase'});
         }else{
             res.status(400).json({message: 'No se creó la clase'});
-        }        
+        }         
     }catch(err){
         console.log(err);
         res.status(500).json({error: 'Error en el servidor'});

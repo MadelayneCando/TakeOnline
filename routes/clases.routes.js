@@ -8,7 +8,7 @@ router.post('/addClassSecret', agregarClase);
 router.post('/viewUserSecret', verUsuarios);
 router.post('/createClassSecret', createClase);
 router.post('/UserClassSecret', verUsuariosPorClase);
-router.put('/updateClase', updateClase);
+router.put('/updateClassSect', updateClase);
 router.get('/getClassSecretSemal', obtenerClaseSemanales);
 router.get('/getClassSecret', getClases);
 router.put('/changeClassSecret', cambiaClase);
